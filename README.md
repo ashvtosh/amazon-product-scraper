@@ -44,14 +44,14 @@ This downloads the Chromium browser engine that the script uses to navigate the 
 playwright install chromium
 ```
 
-Running the Project
+**5. Running the Project**
 To start the scraper, ensure your virtual environment is activated (venv) and run the following command:
 
 ```bash
 python scraper.py
 ```
 
-Important Usage Notes:
+**Important Usage Notes:**
 The CAPTCHA Window: The script is intentionally configured to run with the browser visible (headless=False). When the script starts, a browser window will open and wait for 5 seconds. Amazon frequently flags automated traffic; if a CAPTCHA appears, use this 5-second window to quickly solve it manually before the script begins its automated clicking.
 
 Updating the Target URL: To scrape a different product, open scraper.py, locate the amazon_url variable at the bottom of the file, and replace it with your target URL. For best results, use clean URLs stripped of tracking parameters (e.g., https://www.amazon.in/dp/B0BMPLHLZ9).
