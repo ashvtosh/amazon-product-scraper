@@ -20,28 +20,37 @@ This keeps the project dependencies isolated from your main system.
 
 On Windows:
 
-Bash
+```bash
 python -m venv venv
 venv\Scripts\activate
+```
 On Mac/Linux:
 
-Bash
+```bash
 python3 -m venv venv
 source venv/bin/activate
-3. Install the required Python packages:
+```
 
-Bash
+**3. Install the required Python packages:**
+
+```bash
 pip install playwright nest-asyncio
-4. Install Playwright browser binaries:
+```
+
+**4. Install Playwright browser binaries:**
 This downloads the Chromium browser engine that the script uses to navigate the web.
 
-Bash
+```bash
 playwright install chromium
+```
+
 Running the Project
 To start the scraper, ensure your virtual environment is activated (venv) and run the following command:
 
-Bash
+```bash
 python scraper.py
+```
+
 Important Usage Notes:
 The CAPTCHA Window: The script is intentionally configured to run with the browser visible (headless=False). When the script starts, a browser window will open and wait for 5 seconds. Amazon frequently flags automated traffic; if a CAPTCHA appears, use this 5-second window to quickly solve it manually before the script begins its automated clicking.
 
